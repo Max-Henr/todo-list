@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: #F5F5F5;
+}
+.container{
+    width: 900px;
+    background-color: #ffe4c4;
+    min-height: 100vh;
+    max-height: fit-content;
+    margin: auto;
+    padding: 1rem;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0 , 1fr));
+    align-items: center;
+    gap: 2rem;
+    h1{
+        text-align: center;
+        grid-column: 1/3;
+    }
+}
+/* form */
+#inputForm{
+    grid-column: 4/12;
+}
+#inputList{
+    all: unset;
+    background-color: #fffef0;
+    padding-inline: 1rem;
+    border-radius: 4px;
+    width: 100%;
+    height: 30px;
+}
+.listContainer{
+    grid-column: 4/12;
+    grid-row: 2/3;
+}
+li{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 1rem;
+    padding-inline: 0.5rem;
+    border-radius: 5px;
+    align-self: center;
+    background-color: #d2b48c;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 3px black;
+    list-style-position: inside;
+    font-size: 24px;
+    font-weight: 600;
+    &:hover{
+        cursor: pointer;
+    }
+    
+}
+.active{
+    text-decoration-line: line-through;
+}
+.btnRemove{
+    all: unset;
+    color: black;
+    background-color: #c0392b;
+    width: 25px;
+    height: 25px;
+    align-self: center;
+    border-radius: 50%;
+    position: relative;
+}
+.btnRemove::before{
+    content: url(/bootstrap-icons-1.3.0/trash.svg);
+    position: absolute;
+    top: 50%;
+    transform: translate(29%, -53%);
+}
+/* end of form */
